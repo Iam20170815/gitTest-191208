@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.repository.mapper.CardDOMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.demo.domain.CardDO">
+        <result column="cardNumber" jdbcType="CHAR" property="cardNumber" />
+        <result column="debitFlag" jdbcType="CHAR" property="debitFlag" />
+        <result column="insCode" jdbcType="CHAR" property="insCode" />
+    </resultMap>
+
+    <select id="Sel" resultType="com.example.demo.domain.CardDO">
+        select * from carddo where cardNumber = #{cardNumber}
+    </select>
+</mapper>
